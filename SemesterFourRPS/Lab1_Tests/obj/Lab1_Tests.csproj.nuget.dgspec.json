@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SemesterFourth\\Lab1_Tests\\Lab1_Tests.csproj": {}
+    "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1_Tests.csproj": {}
   },
   "projects": {
-    "C:\\SemesterFourth\\Lab1\\Lab1.csproj": {
+    "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SemesterFourth\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "C:\\SemesterFourth\\Lab1\\Lab1.csproj",
+        "projectPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Lab1.csproj",
         "packagesPath": "C:\\Users\\mrkub\\.nuget\\packages\\",
-        "outputPath": "C:\\SemesterFourth\\Lab1\\obj\\",
+        "outputPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\SemesterFourth\\Lab1_Tests\\Lab1_Tests.csproj": {
+    "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SemesterFourth\\Lab1_Tests\\Lab1_Tests.csproj",
+        "projectUniqueName": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1_Tests.csproj",
         "projectName": "Lab1_Tests",
-        "projectPath": "C:\\SemesterFourth\\Lab1_Tests\\Lab1_Tests.csproj",
+        "projectPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1_Tests.csproj",
         "packagesPath": "C:\\Users\\mrkub\\.nuget\\packages\\",
-        "outputPath": "C:\\SemesterFourth\\Lab1_Tests\\obj\\",
+        "outputPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,8 +91,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\SemesterFourth\\Lab1\\Lab1.csproj": {
-                "projectPath": "C:\\SemesterFourth\\Lab1\\Lab1.csproj"
+              "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Lab1.csproj": {
+                "projectPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Lab1.csproj"
               }
             }
           }
