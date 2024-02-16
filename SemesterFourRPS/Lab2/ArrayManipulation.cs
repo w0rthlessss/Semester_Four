@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    static class ArrayManipulation
+    public static class ArrayManipulation
     {
+
+        public static bool IsArraySorted(double[] array)
+        {
+            for(int i = 0; i < array.Length - 1; i++)
+            {
+                if (array[i] > array[i + 1]) return false;
+            }
+            return true;
+        }
         private static void Swap(ref double[] array, int i, int j)
         {
             double tmp = array[i];
@@ -16,6 +25,7 @@ namespace Lab2
         }
         public static void InsertionSort(ref double[] array)
         {
+            if (IsArraySorted(array)) return;
             for(int i = 1; i < array.Length; i++)
             {
                 double elem = array[i];
@@ -31,9 +41,9 @@ namespace Lab2
 
         public static int BinarySearch(double[] array, double requestedElement)
         {
-            double epsilon = 0.0001;
+            const double epsilon = 0.0001;
             int left = 0, right = array.Length - 1;
-            while(left <= right)
+            while(left < right)
             {
                 int mid = left + (right - left) / 2;
                 if (Math.Abs(array[mid] - requestedElement) < epsilon) return mid;
