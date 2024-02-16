@@ -39,9 +39,6 @@ namespace Lab2
                     Console.Write($"{array[i]} ");
                 Console.WriteLine();
 
-                double[] expected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-                bool a = double.Equals(expected, array);
-
                 Console.WriteLine($"{Environment.NewLine}Enter element which position must be found:");
                 double requestedElement = DataInputAndOutput.ReadInt(">>");
                 Console.WriteLine();
