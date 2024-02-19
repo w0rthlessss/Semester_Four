@@ -1,0 +1,17 @@
+C:\SemesterFourth\SemesterFourRPS\Lab_3\bin\Debug\net8.0-windows\Lab_3.exe
+C:\SemesterFourth\SemesterFourRPS\Lab_3\bin\Debug\net8.0-windows\Lab_3.deps.json
+C:\SemesterFourth\SemesterFourRPS\Lab_3\bin\Debug\net8.0-windows\Lab_3.runtimeconfig.json
+C:\SemesterFourth\SemesterFourRPS\Lab_3\bin\Debug\net8.0-windows\Lab_3.dll
+C:\SemesterFourth\SemesterFourRPS\Lab_3\bin\Debug\net8.0-windows\Lab_3.pdb
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.csproj.GenerateResource.cache
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.AssemblyInfoInputs.cache
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.AssemblyInfo.cs
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.csproj.CoreCompileInputs.cache
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.sourcelink.json
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.dll
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\refint\Lab_3.dll
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.pdb
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.genruntimeconfig.cache
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\ref\Lab_3.dll
+C:\SemesterFourth\SemesterFourRPS\Lab_3\obj\Debug\net8.0-windows\Lab_3.GraphForm.resources

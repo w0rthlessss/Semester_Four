@@ -8,7 +8,7 @@ namespace Lab_3
         }
 
         private int step = 50;
-        private const int drawStep = 10;
+        private const int drawStep = 7;
         private int a = 0;
         private int b = 1;
         private int c = 1;
@@ -49,7 +49,7 @@ namespace Lab_3
                     );
             Graphics graphic = graphic = grahPlane.CreateGraphics();
             Pen pen = new Pen(Color.BlueViolet, 3f);
-
+            //
             while (xPrev < Math.Min(grahPlane.Width, grahPlane.Width / 2 + rightBorderVal * step))
             {
                 int x = xPrev + drawStep;
@@ -65,6 +65,8 @@ namespace Lab_3
             }
         }
 
+
+
         private void grahPlane_Resize(object sender, EventArgs e)
         {
             DrawAxises();
@@ -79,39 +81,10 @@ namespace Lab_3
         private void drawGraphBtn_Click(object sender, EventArgs e)
         {
             DrawAxises();
-            if (CheckGraphOdds())
-            {
-                DrawGraph();
-                isGraphShown = true;
-            }
+            DrawGraph();
+            isGraphShown = true;
         }
-        
-        private bool CheckGraphOdds()
-        {
-            isGraphShown = false;
 
-            if (!isValidData) return false;
-
-            if(Math.Abs(a) > grahPlane.Height / 2 / step)
-            {
-                MessageBox.Show("Change \"A\" value, either way graph won't be seen with current window size", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if(leftBorderVal > grahPlane.Width / 2 / step)
-            {
-                MessageBox.Show("Make \"Left Border\" value less, either way graph won't be seen with current window size", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (rightBorderVal < -grahPlane.Width / 2 / step)
-            {
-                MessageBox.Show("Make \"Right Border\" value greater, either way graph won't be seen with current window size", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            return true;
-        }
         private int ValidateValues(string? text, ref int value)
         {
             if (string.IsNullOrEmpty(text))
@@ -169,7 +142,7 @@ namespace Lab_3
 
         }
 
-        private void aValue_Check(object sender, EventArgs e)
+        private void aValue_Leave(object sender, EventArgs e)
         {
             switch (ValidateValues(aValue.Text, ref a))
             {
@@ -189,7 +162,7 @@ namespace Lab_3
             aValue.Select(0, aValue.Text.Length);
         }
 
-        private void bValue_Check(object sender, EventArgs e)
+        private void bValue_Leave(object sender, EventArgs e)
         {
             switch (ValidateValues(bValue.Text, ref b))
             {
@@ -209,7 +182,7 @@ namespace Lab_3
             bValue.Select(0, bValue.Text.Length);
         }
 
-        private void cValue_Check(object sender, EventArgs e)
+        private void cValue_Leave(object sender, EventArgs e)
         {
             switch (ValidateValues(cValue.Text, ref c))
             {
@@ -229,7 +202,7 @@ namespace Lab_3
             cValue.Select(0, cValue.Text.Length);
         }
 
-        private void dValue_Check(object sender, EventArgs e)
+        private void dValue_Leave(object sender, EventArgs e)
         {
             switch (ValidateValues(dValue.Text, ref d))
             {
@@ -249,7 +222,7 @@ namespace Lab_3
             dValue.Select(0, dValue.Text.Length);
         }
 
-        private void stepValue_Check(object sender, EventArgs e)
+        private void stepValue_Leave(object sender, EventArgs e)
         {
             switch (ValidateValues(stepValue.Text, ref step))
             {
@@ -264,7 +237,7 @@ namespace Lab_3
                     break;
             }
             
-            if(step > 10 )
+            if(step > 5 )
             {
                 isValidData = true;
                 return;
@@ -272,7 +245,7 @@ namespace Lab_3
 
             if( step <= 0) MessageBox.Show("Step value can't be negative or 0!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            else MessageBox.Show("Step value is too tiny!\nGraph is more visible with step > 10", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else MessageBox.Show("Step value is too tiny!\nGraph is more visible with step > 5", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             isValidData = false;
             stepValue.Focus();

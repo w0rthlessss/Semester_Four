@@ -221,7 +221,7 @@
             aValue.TabIndex = 2;
             aValue.Text = "0";
             aValue.TextAlign = HorizontalAlignment.Center;
-            aValue.Leave += aValue_Check;
+            aValue.Leave += aValue_Leave;
             // 
             // bValue
             // 
@@ -235,7 +235,7 @@
             bValue.TabIndex = 3;
             bValue.Text = "1";
             bValue.TextAlign = HorizontalAlignment.Center;
-            bValue.Leave += bValue_Check;
+            bValue.Leave += bValue_Leave;
             // 
             // cValue
             // 
@@ -249,7 +249,7 @@
             cValue.TabIndex = 4;
             cValue.Text = "1";
             cValue.TextAlign = HorizontalAlignment.Center;
-            cValue.Leave += cValue_Check;
+            cValue.Leave += cValue_Leave;
             // 
             // dValue
             // 
@@ -263,7 +263,7 @@
             dValue.TabIndex = 5;
             dValue.Text = "1";
             dValue.TextAlign = HorizontalAlignment.Center;
-            dValue.Leave += dValue_Check;
+            dValue.Leave += dValue_Leave;
             // 
             // stepValue
             // 
@@ -277,7 +277,7 @@
             stepValue.TabIndex = 6;
             stepValue.Text = "50";
             stepValue.TextAlign = HorizontalAlignment.Center;
-            stepValue.Leave += stepValue_Check;
+            stepValue.Leave += stepValue_Leave;
             // 
             // leftBorder
             // 
