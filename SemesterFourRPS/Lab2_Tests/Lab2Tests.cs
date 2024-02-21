@@ -49,5 +49,18 @@ namespace Lab2_Tests
 
             Assert.AreEqual(expected, position);
         }
+
+        [TestMethod]
+
+        public void BorderElement()
+        {
+            double[] array = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+
+            ArrayManipulation.InsertionSort(ref array);
+            int position = ArrayManipulation.BinarySearch(array, 9);
+            int expected = 9;
+
+            Assert.AreEqual(expected, position);
+        }
     }
 }

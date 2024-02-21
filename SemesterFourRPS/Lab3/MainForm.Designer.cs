@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            showCoordinatesBtn = new Button();
+            panel5 = new Panel();
             drawGraphBtn = new Button();
             splitter2 = new Splitter();
             splitter1 = new Splitter();
@@ -52,13 +54,13 @@
             panel2 = new Panel();
             func = new Label();
             panel1 = new Panel();
-            grahPlane = new PictureBox();
+            graphPlane = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)grahPlane).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)graphPlane).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -72,6 +74,8 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.DimGray;
+            splitContainer1.Panel1.Controls.Add(showCoordinatesBtn);
+            splitContainer1.Panel1.Controls.Add(panel5);
             splitContainer1.Panel1.Controls.Add(drawGraphBtn);
             splitContainer1.Panel1.Controls.Add(splitter2);
             splitContainer1.Panel1.Controls.Add(splitter1);
@@ -84,10 +88,37 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(grahPlane);
-            splitContainer1.Size = new Size(965, 501);
+            splitContainer1.Panel2.Controls.Add(graphPlane);
+            splitContainer1.Size = new Size(965, 582);
             splitContainer1.SplitterDistance = 357;
             splitContainer1.TabIndex = 0;
+            // 
+            // showCoordinatesBtn
+            // 
+            showCoordinatesBtn.BackColor = Color.FromArgb(64, 64, 64);
+            showCoordinatesBtn.CausesValidation = false;
+            showCoordinatesBtn.Dock = DockStyle.Bottom;
+            showCoordinatesBtn.Enabled = false;
+            showCoordinatesBtn.FlatAppearance.BorderColor = Color.White;
+            showCoordinatesBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(54, 54, 54);
+            showCoordinatesBtn.FlatStyle = FlatStyle.Flat;
+            showCoordinatesBtn.Font = new Font("Impact", 11F);
+            showCoordinatesBtn.ForeColor = Color.White;
+            showCoordinatesBtn.Location = new Point(58, 431);
+            showCoordinatesBtn.Name = "showCoordinatesBtn";
+            showCoordinatesBtn.Size = new Size(237, 37);
+            showCoordinatesBtn.TabIndex = 11;
+            showCoordinatesBtn.Text = "Show Coordinates";
+            showCoordinatesBtn.UseVisualStyleBackColor = false;
+            showCoordinatesBtn.Click += showCoordinatesBtn_Click;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(58, 468);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(237, 44);
+            panel5.TabIndex = 10;
             // 
             // drawGraphBtn
             // 
@@ -99,7 +130,7 @@
             drawGraphBtn.FlatStyle = FlatStyle.Flat;
             drawGraphBtn.Font = new Font("Impact", 11F);
             drawGraphBtn.ForeColor = Color.White;
-            drawGraphBtn.Location = new Point(58, 425);
+            drawGraphBtn.Location = new Point(58, 512);
             drawGraphBtn.Name = "drawGraphBtn";
             drawGraphBtn.Size = new Size(237, 37);
             drawGraphBtn.TabIndex = 8;
@@ -113,7 +144,7 @@
             splitter2.Dock = DockStyle.Right;
             splitter2.Location = new Point(295, 425);
             splitter2.Name = "splitter2";
-            splitter2.Size = new Size(62, 37);
+            splitter2.Size = new Size(62, 124);
             splitter2.TabIndex = 7;
             splitter2.TabStop = false;
             // 
@@ -122,7 +153,7 @@
             splitter1.BackColor = Color.DimGray;
             splitter1.Location = new Point(0, 425);
             splitter1.Name = "splitter1";
-            splitter1.Size = new Size(58, 37);
+            splitter1.Size = new Size(58, 124);
             splitter1.TabIndex = 6;
             splitter1.TabStop = false;
             // 
@@ -130,9 +161,9 @@
             // 
             panel4.BackColor = Color.DimGray;
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 462);
+            panel4.Location = new Point(0, 549);
             panel4.Name = "panel4";
-            panel4.Size = new Size(357, 39);
+            panel4.Size = new Size(357, 33);
             panel4.TabIndex = 5;
             // 
             // panel3
@@ -191,7 +222,7 @@
             leftBorderValue.Name = "leftBorderValue";
             leftBorderValue.Size = new Size(101, 28);
             leftBorderValue.TabIndex = 0;
-            leftBorderValue.Text = "-100";
+            leftBorderValue.Text = "-10,00";
             leftBorderValue.TextAlign = HorizontalAlignment.Center;
             leftBorderValue.Leave += leftBorderValue_Check;
             // 
@@ -205,7 +236,7 @@
             rightBorderValue.Name = "rightBorderValue";
             rightBorderValue.Size = new Size(101, 28);
             rightBorderValue.TabIndex = 1;
-            rightBorderValue.Text = "100";
+            rightBorderValue.Text = "10,00";
             rightBorderValue.TextAlign = HorizontalAlignment.Center;
             rightBorderValue.Leave += rightBorderValue_Check;
             // 
@@ -219,7 +250,7 @@
             aValue.Name = "aValue";
             aValue.Size = new Size(101, 28);
             aValue.TabIndex = 2;
-            aValue.Text = "0";
+            aValue.Text = "0,00";
             aValue.TextAlign = HorizontalAlignment.Center;
             aValue.Leave += aValue_Check;
             // 
@@ -233,7 +264,7 @@
             bValue.Name = "bValue";
             bValue.Size = new Size(101, 28);
             bValue.TabIndex = 3;
-            bValue.Text = "1";
+            bValue.Text = "1,00";
             bValue.TextAlign = HorizontalAlignment.Center;
             bValue.Leave += bValue_Check;
             // 
@@ -247,7 +278,7 @@
             cValue.Name = "cValue";
             cValue.Size = new Size(101, 28);
             cValue.TabIndex = 4;
-            cValue.Text = "1";
+            cValue.Text = "1,00";
             cValue.TextAlign = HorizontalAlignment.Center;
             cValue.Leave += cValue_Check;
             // 
@@ -261,7 +292,7 @@
             dValue.Name = "dValue";
             dValue.Size = new Size(101, 28);
             dValue.TabIndex = 5;
-            dValue.Text = "1";
+            dValue.Text = "0,00";
             dValue.TextAlign = HorizontalAlignment.Center;
             dValue.Leave += dValue_Check;
             // 
@@ -275,7 +306,7 @@
             stepValue.Name = "stepValue";
             stepValue.Size = new Size(101, 28);
             stepValue.TabIndex = 6;
-            stepValue.Text = "50";
+            stepValue.Text = "0,10";
             stepValue.TextAlign = HorizontalAlignment.Center;
             stepValue.Leave += stepValue_Check;
             // 
@@ -375,7 +406,7 @@
             stepLabel.Name = "stepLabel";
             stepLabel.Size = new Size(101, 22);
             stepLabel.TabIndex = 13;
-            stepLabel.Text = "Step (px)";
+            stepLabel.Text = "Step";
             stepLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel2
@@ -409,22 +440,22 @@
             panel1.Size = new Size(357, 62);
             panel1.TabIndex = 1;
             // 
-            // grahPlane
+            // graphPlane
             // 
-            grahPlane.BackColor = SystemColors.Control;
-            grahPlane.Dock = DockStyle.Fill;
-            grahPlane.Location = new Point(0, 0);
-            grahPlane.Name = "grahPlane";
-            grahPlane.Size = new Size(604, 501);
-            grahPlane.TabIndex = 0;
-            grahPlane.TabStop = false;
-            grahPlane.Resize += grahPlane_Resize;
+            graphPlane.BackColor = SystemColors.Control;
+            graphPlane.Dock = DockStyle.Fill;
+            graphPlane.Location = new Point(0, 0);
+            graphPlane.Name = "graphPlane";
+            graphPlane.Size = new Size(604, 582);
+            graphPlane.TabIndex = 0;
+            graphPlane.TabStop = false;
+            graphPlane.Resize += grahPlane_Resize;
             // 
             // GraphForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(965, 501);
+            ClientSize = new Size(965, 582);
             Controls.Add(splitContainer1);
             Name = "GraphForm";
             Text = "Lab3";
@@ -435,7 +466,7 @@
             splitContainer1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)grahPlane).EndInit();
+            ((System.ComponentModel.ISupportInitialize)graphPlane).EndInit();
             ResumeLayout(false);
         }
 
@@ -443,7 +474,7 @@
 
         private SplitContainer splitContainer1;
         private Label func;
-        private PictureBox grahPlane;
+        private PictureBox graphPlane;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel2;
         private Panel panel1;
@@ -466,5 +497,7 @@
         private Splitter splitter2;
         private Splitter splitter1;
         private Panel panel4;
+        private Panel panel5;
+        private Button showCoordinatesBtn;
     }
 }

@@ -32,3 +32,4 @@ C:\SemesterFourth\SemesterFourRPS\Lab3\obj\Debug\net8.0-windows\refint\Lab_3.dll
 C:\SemesterFourth\SemesterFourRPS\Lab3\obj\Debug\net8.0-windows\Lab_3.pdb
 C:\SemesterFourth\SemesterFourRPS\Lab3\obj\Debug\net8.0-windows\Lab_3.genruntimeconfig.cache
 C:\SemesterFourth\SemesterFourRPS\Lab3\obj\Debug\net8.0-windows\ref\Lab_3.dll
+C:\SemesterFourth\SemesterFourRPS\Lab3\obj\Debug\net8.0-windows\Lab_3.TableForm.resources
