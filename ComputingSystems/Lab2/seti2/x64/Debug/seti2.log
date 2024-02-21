@@ -1,0 +1,26 @@
+﻿  main.cpp
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(10,2): error C4235: использовано нестандартное расширение: ключевое слово "__asm" данной архитектурой не поддерживается
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(11,3): error C2065: XOR: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(11,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "EDX"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(11,7): error C2065: EDX: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(11,12): error C2065: EDX: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(12,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "MOV"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(12,3): error C2065: MOV: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(12,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "EAX"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(12,7): error C2065: EAX: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(13,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "DIV"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(13,3): error C2065: DIV: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(13,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "five"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(14,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "CMP"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(14,3): error C2065: CMP: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(14,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "EDX"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(14,7): error C2065: EDX: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(15,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "JNE"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(15,3): error C2065: JNE: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(15,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "L01"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(15,7): error C2065: L01: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(16,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "MOV"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(16,3): error C2065: MOV: необъявленный идентификатор
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(16,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "isNumberDivisibleByFive"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(17,3): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "L01"
+C:\Users\Даниил\source\repos\seti2\seti2\main.cpp(18,2): error C2059: синтаксическая ошибка: }
