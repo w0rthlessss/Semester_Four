@@ -63,9 +63,39 @@ namespace Lab4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu {
+        internal static System.Drawing.Bitmap add_small {
             get {
-                object obj = ResourceManager.GetObject("menu", resourceCulture);
+                object obj = ResourceManager.GetObject("add_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_small {
+            get {
+                object obj = ResourceManager.GetObject("edit_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_small {
+            get {
+                object obj = ResourceManager.GetObject("list_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_small {
+            get {
+                object obj = ResourceManager.GetObject("menu_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

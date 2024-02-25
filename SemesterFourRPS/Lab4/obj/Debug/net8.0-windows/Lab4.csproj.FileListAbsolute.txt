@@ -16,3 +16,6 @@ C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.pdb
 C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.genruntimeconfig.cache
 C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\ref\Lab4.dll
 C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.Properties.Resources.resources
+C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.AddForm.resources
+C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.EditForm.resources
+C:\SemesterFourth\SemesterFourRPS\Lab4\obj\Debug\net8.0-windows\Lab4.ListForm.resources
