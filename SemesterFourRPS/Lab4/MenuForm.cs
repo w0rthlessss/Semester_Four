@@ -18,18 +18,18 @@ namespace Lab4
         {
             if (isMenuOpen)
             {
-                sideBarMenu.Width -= 15;
+                sideBarMenu.Width -= 20;
 
-                if (sideBarMenu.Width <= 55)
+                if (sideBarMenu.Width <= 53)
                 {
-                    sideBarMenu.Width = 55;
+                    sideBarMenu.Width = 53;
                     isMenuOpen = false;
                     menuTransition.Stop();
                 }
             }
             else
             {
-                sideBarMenu.Width += 15;
+                sideBarMenu.Width += 20;
 
                 if (sideBarMenu.Width >= 280)
                 {
@@ -47,10 +47,6 @@ namespace Lab4
 
         public void OpenDebtListForm()
         {
-           /*DateTime date = DateTime.Now;
-            DatabaseValues val = new DatabaseValues(1, "Ivan", "Efremov", 100, date.ToString("dd/MM/yyyy"), date.ToString("dd/MM/yyyy"), "Active");
-            database.InsertValue(val);*/
-
             if (debtList == null)
             {
                 debtList = new ListForm(this);
@@ -63,7 +59,29 @@ namespace Lab4
             debtList.Dock = DockStyle.Fill;
         }
 
-        
+        public void OpenEditForm(int id)
+        {
+            if (id != 0)
+            {
+                editDebt = null;
+                editDebt = new EditForm(this, id);
+                editDebt.MdiParent = this;
+                editDebt.Show();
+            }
+            else
+            {
+                if (editDebt == null)
+                {
+                    editDebt = new EditForm(this);
+                    editDebt.FormClosed += EditDebt_FormClosed;
+                    editDebt.MdiParent = this;
+                    editDebt.Show();
+                }
+                else editDebt.Activate();
+            }
+
+            editDebt.Dock = DockStyle.Fill;
+        }
 
         private void listLabel_Click(object sender, EventArgs e)
         {
@@ -94,7 +112,7 @@ namespace Lab4
         {
             if (editDebt == null)
             {
-                editDebt = new EditForm();
+                editDebt = new EditForm(this);
                 editDebt.FormClosed += EditDebt_FormClosed;
                 editDebt.MdiParent = this;
                 editDebt.Show();

@@ -5,13 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lab4
 {
     public partial class AddForm : Form
-    { private DBForm main;
+    {
+        private DBForm main;
         public AddForm(DBForm main)
         {
             this.main = main;
@@ -30,7 +32,7 @@ namespace Lab4
             secondNameTextBox.Clear();
             amountTextBox.Clear();
             loanDatePicker.Value = DateTime.Now;
-            expirationDatePicker.Value = DateTime.Now;
+            expirationDatePicker.Value = DateTime.Now.AddDays(1);
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -38,7 +40,6 @@ namespace Lab4
             int id = Convert.ToInt32(idTextBox.Text);
             string firstName = firstNameTextBox.Text;
             string lastName = secondNameTextBox.Text;
-            int value = Convert.ToInt32(amountTextBox.Text);
             string loanDate = loanDatePicker.Text;
             string expirationDate = expirationDatePicker.Text;
             string status = "Active";
@@ -53,20 +54,20 @@ namespace Lab4
                 MessageBox.Show("Second name field cannot be empty!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (value == 0)
+            if (!int.TryParse(amountTextBox.Text, out int value))
             {
-                MessageBox.Show("Amount field cannot be zero!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Amount field cannot be empty!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (DateTime.Compare(
-                DateTime.Parse(loanDate), 
+                DateTime.Parse(loanDate),
                 DateTime.Parse(expirationDate)) >= 0)
             {
                 MessageBox.Show("Expiration date cannot be equal or earlier than loan date!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Array.Resize(ref ListForm.values, ListForm.values.Length+1);
+            Array.Resize(ref ListForm.values, ListForm.values.Length + 1);
             DatabaseValues _new = new DatabaseValues(id, firstName, lastName, value, loanDate, expirationDate, status);
             ListForm.values[ListForm.values.Length - 1] = _new;
             DBForm.database.InsertValue(_new);
@@ -74,6 +75,32 @@ namespace Lab4
             ClearFields();
             main.OpenDebtListForm();
         }
-        
+
+        private void amountTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(amountTextBox.Text, $"^[1-9]*[0-9]+$") && amountTextBox.Text != "")
+            {
+                //MessageBox.Show("Amount must be natural number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                amountTextBox.Focus();
+                amountTextBox.Text = amountTextBox.Text.Substring(0, amountTextBox.Text.Length-1);
+                amountTextBox.Select(amountTextBox.Text.Length, 0);
+                return;
+            }
+        }
+
+        private void firstNameTextBox_Click(object sender, EventArgs e)
+        {
+            firstNameTextBox.Select(0, 0);
+        }
+
+        private void secondNameTextBox_Click(object sender, EventArgs e)
+        {
+            secondNameTextBox.Select(0, 0);
+        }
+
+        private void AddForm_Deactivate(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
     }
 }

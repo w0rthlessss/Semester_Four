@@ -96,6 +96,7 @@
             debtTable.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Black;
             debtTable.Size = new Size(850, 400);
             debtTable.TabIndex = 1;
+            debtTable.CellMouseDoubleClick += debtTable_CellMouseDoubleClick;
             // 
             // id
             // 

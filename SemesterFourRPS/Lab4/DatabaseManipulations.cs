@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -75,6 +76,28 @@ namespace Lab4
             Status = status;
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            DatabaseValues other = (DatabaseValues)obj;
+
+            return (Id == other.Id && 
+                FirstName == other.FirstName && 
+                LastName == other.LastName && 
+                Value == other.Value && 
+                LoanDate == other.LoanDate && 
+                ExpirationDate == other.ExpirationDate && 
+                Status == other.Status);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode() ^ Id;
+        }
     }
     public class DatabaseManipulations
     {
@@ -118,7 +141,7 @@ namespace Lab4
         {
             command.CommandText = $"UPDATE Debts SET " +
                 $"firstName = \"{value.FirstName}\", " +
-                $"lastName = \"{value.LastName}\", " +
+                $"secondName = \"{value.LastName}\", " +
                 $"amount = \"{value.Value}\", " +
                 $"loanDate = \"{value.LoanDate:dd/MM/yyyy}\", " +
                 $"expirationDate = \"{value.ExpirationDate:dd/MM/yyyy}\"," +

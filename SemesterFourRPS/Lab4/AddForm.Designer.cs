@@ -162,8 +162,10 @@
             firstNameTextBox.Location = new Point(111, 11);
             firstNameTextBox.Mask = ">L<??????????";
             firstNameTextBox.Name = "firstNameTextBox";
+            firstNameTextBox.PromptChar = ' ';
             firstNameTextBox.Size = new Size(156, 27);
             firstNameTextBox.TabIndex = 1;
+            firstNameTextBox.Click += firstNameTextBox_Click;
             // 
             // firstNameLabel
             // 
@@ -192,8 +194,10 @@
             secondNameTextBox.Location = new Point(135, 12);
             secondNameTextBox.Mask = ">L<??????????";
             secondNameTextBox.Name = "secondNameTextBox";
+            secondNameTextBox.PromptChar = ' ';
             secondNameTextBox.Size = new Size(161, 27);
             secondNameTextBox.TabIndex = 2;
+            secondNameTextBox.Click += secondNameTextBox_Click;
             // 
             // secondNameLabel
             // 
@@ -233,12 +237,13 @@
             amountTextBox.ImeMode = ImeMode.NoControl;
             amountTextBox.InsertKeyMode = InsertKeyMode.Overwrite;
             amountTextBox.Location = new Point(111, 12);
-            amountTextBox.Mask = "0999990";
             amountTextBox.Name = "amountTextBox";
             amountTextBox.PromptChar = '0';
             amountTextBox.RejectInputOnFirstFailure = true;
             amountTextBox.Size = new Size(156, 27);
             amountTextBox.TabIndex = 1;
+            amountTextBox.Text = "1";
+            amountTextBox.TextChanged += amountTextBox_TextChanged;
             // 
             // amountLabel
             // 
@@ -366,6 +371,7 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "AddForm";
+            Deactivate += AddForm_Deactivate;
             Load += AddForm_Load;
             idContainer.ResumeLayout(false);
             idContainer.PerformLayout();

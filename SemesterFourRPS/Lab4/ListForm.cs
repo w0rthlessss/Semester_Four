@@ -14,7 +14,7 @@ namespace Lab4
     {
         private DBForm main;
         public static DatabaseValues[] values = new DatabaseValues[0];
-        private static DatabaseValues[] oldValues = new DatabaseValues[0];
+        public static DatabaseValues[] oldValues = new DatabaseValues[0];
         public ListForm(DBForm main)
         {
             InitializeComponent();
@@ -23,8 +23,8 @@ namespace Lab4
 
         public void UpdateTableValues()
         {
-            values = DBForm.database.ReadTable();
-            oldValues = values;
+            oldValues = new DatabaseValues[values.Length];
+            Array.Copy(values, oldValues, values.Length);
             debtTable.Rows.Clear();
             debtTable.RowCount = values.Length;
 
@@ -42,7 +42,7 @@ namespace Lab4
                     values[i].Status = "Expired";
                     DBForm.database.UpdateStatus(values[i].Id, "Expired");
                 }
-                
+
                 debtTable.Rows[i].Cells[6].Value = values[i].Status;
 
                 if (values[i].Status == "Active")
@@ -54,13 +54,31 @@ namespace Lab4
 
         private void ListForm_Load(object sender, EventArgs e)
         {
+            values = DBForm.database.ReadTable();
             UpdateTableValues();
+        }
+
+        private bool CompareOldAndNew()
+        {
+            if (oldValues.Length != values.Length) return true;
+            for (int i = 0; i < oldValues.Length; i++)
+            {
+                if (!oldValues.Equals(values[i])) return false;
+            }
+            return true;
+
         }
 
         private void ListForm_Activated(object sender, EventArgs e)
         {
-            if(oldValues != values) 
+            if (CompareOldAndNew())
                 UpdateTableValues();
+        }
+
+        private void debtTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int id = Convert.ToInt32(debtTable.Rows[e.RowIndex].Cells[0].Value);
+            main.OpenEditForm(id);
         }
     }
 }

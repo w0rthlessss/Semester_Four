@@ -38,24 +38,24 @@
             dateLayout = new FlowLayoutPanel();
             amountLabel = new Label();
             amountContainer = new Panel();
+            amountTextBox = new MaskedTextBox();
             amountLayout = new FlowLayoutPanel();
             secondNameLabel = new Label();
             firstNameLabel = new Label();
             firstNameContainer = new Panel();
+            firstNameTextBox = new MaskedTextBox();
             idLayout = new FlowLayoutPanel();
             idContainer = new Panel();
+            idTextBox = new MaskedTextBox();
             idLabel = new Label();
             fullNameLayout = new FlowLayoutPanel();
             secondNameContainer = new Panel();
+            secondNameTextBox = new MaskedTextBox();
             mainLayout = new FlowLayoutPanel();
             formLabel = new Label();
             btnContainer = new Panel();
-            firstNameTextBox = new MaskedTextBox();
-            maskedTextBox1 = new MaskedTextBox();
-            amountTextBox = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            splitter1 = new Splitter();
             deleteBtn = new Button();
+            splitter1 = new Splitter();
             expirationDateContainer.SuspendLayout();
             loanDateContainer.SuspendLayout();
             dateLayout.SuspendLayout();
@@ -85,6 +85,7 @@
             applyBtn.TabIndex = 0;
             applyBtn.Text = "Apply Changes";
             applyBtn.UseVisualStyleBackColor = false;
+            applyBtn.Click += applyBtn_Click;
             // 
             // expirationDatePicker
             // 
@@ -92,6 +93,7 @@
             expirationDatePicker.Name = "expirationDatePicker";
             expirationDatePicker.Size = new Size(156, 27);
             expirationDatePicker.TabIndex = 1;
+            expirationDatePicker.MouseDown += IfDatabaseContainsThisId;
             // 
             // expirationDateContainer
             // 
@@ -120,6 +122,7 @@
             loanDatePicker.Name = "loanDatePicker";
             loanDatePicker.Size = new Size(156, 27);
             loanDatePicker.TabIndex = 1;
+            loanDatePicker.MouseDown += IfDatabaseContainsThisId;
             // 
             // loanDateLabel
             // 
@@ -174,6 +177,21 @@
             amountContainer.Size = new Size(270, 49);
             amountContainer.TabIndex = 0;
             // 
+            // amountTextBox
+            // 
+            amountTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            amountTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            amountTextBox.ImeMode = ImeMode.NoControl;
+            amountTextBox.Location = new Point(111, 12);
+            amountTextBox.Name = "amountTextBox";
+            amountTextBox.PromptChar = '0';
+            amountTextBox.RejectInputOnFirstFailure = true;
+            amountTextBox.Size = new Size(156, 27);
+            amountTextBox.TabIndex = 2;
+            amountTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            amountTextBox.MouseClick += IfDatabaseContainsThisId;
+            amountTextBox.TextChanged += amountTextBox_TextChanged;
+            // 
             // amountLayout
             // 
             amountLayout.Controls.Add(amountContainer);
@@ -216,6 +234,17 @@
             firstNameContainer.Size = new Size(270, 49);
             firstNameContainer.TabIndex = 0;
             // 
+            // firstNameTextBox
+            // 
+            firstNameTextBox.Location = new Point(111, 11);
+            firstNameTextBox.Mask = ">L<??????????";
+            firstNameTextBox.Name = "firstNameTextBox";
+            firstNameTextBox.PromptChar = ' ';
+            firstNameTextBox.Size = new Size(156, 27);
+            firstNameTextBox.TabIndex = 2;
+            firstNameTextBox.Click += firstNameTextBox_Click;
+            firstNameTextBox.MouseClick += IfDatabaseContainsThisId;
+            // 
             // idLayout
             // 
             idLayout.Controls.Add(idContainer);
@@ -228,13 +257,25 @@
             // 
             // idContainer
             // 
-            idContainer.Controls.Add(maskedTextBox2);
+            idContainer.Controls.Add(idTextBox);
             idContainer.Controls.Add(idLabel);
             idContainer.Dock = DockStyle.Top;
             idContainer.Location = new Point(3, 3);
             idContainer.Name = "idContainer";
             idContainer.Size = new Size(108, 49);
             idContainer.TabIndex = 0;
+            // 
+            // idTextBox
+            // 
+            idTextBox.InsertKeyMode = InsertKeyMode.Overwrite;
+            idTextBox.Location = new Point(29, 12);
+            idTextBox.Name = "idTextBox";
+            idTextBox.PromptChar = '0';
+            idTextBox.RejectInputOnFirstFailure = true;
+            idTextBox.Size = new Size(76, 27);
+            idTextBox.TabIndex = 1;
+            idTextBox.ValidatingType = typeof(int);
+            idTextBox.TextChanged += idTextBox_TextChanged;
             // 
             // idLabel
             // 
@@ -260,7 +301,7 @@
             // 
             // secondNameContainer
             // 
-            secondNameContainer.Controls.Add(maskedTextBox1);
+            secondNameContainer.Controls.Add(secondNameTextBox);
             secondNameContainer.Controls.Add(secondNameLabel);
             secondNameContainer.Dock = DockStyle.Top;
             secondNameContainer.Location = new Point(376, 3);
@@ -268,6 +309,17 @@
             secondNameContainer.Name = "secondNameContainer";
             secondNameContainer.Size = new Size(300, 49);
             secondNameContainer.TabIndex = 1;
+            // 
+            // secondNameTextBox
+            // 
+            secondNameTextBox.Location = new Point(135, 11);
+            secondNameTextBox.Mask = ">L<??????????";
+            secondNameTextBox.Name = "secondNameTextBox";
+            secondNameTextBox.PromptChar = ' ';
+            secondNameTextBox.Size = new Size(156, 27);
+            secondNameTextBox.TabIndex = 2;
+            secondNameTextBox.Click += secondNameTextBox_Click;
+            secondNameTextBox.MouseClick += IfDatabaseContainsThisId;
             // 
             // mainLayout
             // 
@@ -308,55 +360,6 @@
             btnContainer.Size = new Size(978, 57);
             btnContainer.TabIndex = 6;
             // 
-            // firstNameTextBox
-            // 
-            firstNameTextBox.Location = new Point(111, 11);
-            firstNameTextBox.Mask = ">L<??????????";
-            firstNameTextBox.Name = "firstNameTextBox";
-            firstNameTextBox.Size = new Size(156, 27);
-            firstNameTextBox.TabIndex = 2;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Location = new Point(135, 11);
-            maskedTextBox1.Mask = ">L<??????????";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(156, 27);
-            maskedTextBox1.TabIndex = 2;
-            // 
-            // amountTextBox
-            // 
-            amountTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            amountTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            amountTextBox.ImeMode = ImeMode.NoControl;
-            amountTextBox.Location = new Point(111, 12);
-            amountTextBox.Mask = "099999$";
-            amountTextBox.Name = "amountTextBox";
-            amountTextBox.PromptChar = '0';
-            amountTextBox.RejectInputOnFirstFailure = true;
-            amountTextBox.Size = new Size(156, 27);
-            amountTextBox.TabIndex = 2;
-            amountTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(29, 12);
-            maskedTextBox2.Mask = "09999";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(76, 27);
-            maskedTextBox2.TabIndex = 1;
-            maskedTextBox2.Text = "0";
-            maskedTextBox2.ValidatingType = typeof(int);
-            // 
-            // splitter1
-            // 
-            splitter1.Dock = DockStyle.Right;
-            splitter1.Location = new Point(692, 0);
-            splitter1.Name = "splitter1";
-            splitter1.Size = new Size(27, 37);
-            splitter1.TabIndex = 2;
-            splitter1.TabStop = false;
-            // 
             // deleteBtn
             // 
             deleteBtn.BackColor = Color.FromArgb(192, 0, 0);
@@ -372,6 +375,16 @@
             deleteBtn.TabIndex = 3;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
+            // 
+            // splitter1
+            // 
+            splitter1.Dock = DockStyle.Right;
+            splitter1.Location = new Point(692, 0);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(27, 37);
+            splitter1.TabIndex = 2;
+            splitter1.TabStop = false;
             // 
             // EditForm
             // 
@@ -385,6 +398,8 @@
             Name = "EditForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "EditForm";
+            Deactivate += EditForm_Deactivate;
+            Load += EditForm_Load;
             expirationDateContainer.ResumeLayout(false);
             loanDateContainer.ResumeLayout(false);
             dateLayout.ResumeLayout(false);
@@ -429,9 +444,9 @@
         private Label formLabel;
         private Panel btnContainer;
         private MaskedTextBox firstNameTextBox;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox secondNameTextBox;
         private MaskedTextBox amountTextBox;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox idTextBox;
         private Splitter splitter1;
         private Button deleteBtn;
     }
