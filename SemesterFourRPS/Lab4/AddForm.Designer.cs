@@ -231,14 +231,14 @@
             amountTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             amountTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             amountTextBox.ImeMode = ImeMode.NoControl;
+            amountTextBox.InsertKeyMode = InsertKeyMode.Overwrite;
             amountTextBox.Location = new Point(111, 12);
-            amountTextBox.Mask = "099999$";
+            amountTextBox.Mask = "0999990";
             amountTextBox.Name = "amountTextBox";
             amountTextBox.PromptChar = '0';
             amountTextBox.RejectInputOnFirstFailure = true;
             amountTextBox.Size = new Size(156, 27);
             amountTextBox.TabIndex = 1;
-            amountTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             // 
             // amountLabel
             // 
@@ -344,6 +344,7 @@
             addBtn.TabIndex = 0;
             addBtn.Text = "Add new Debt";
             addBtn.UseVisualStyleBackColor = false;
+            addBtn.Click += addBtn_Click;
             // 
             // AddForm
             // 
@@ -365,6 +366,7 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "AddForm";
+            Load += AddForm_Load;
             idContainer.ResumeLayout(false);
             idContainer.PerformLayout();
             mainLayout.ResumeLayout(false);

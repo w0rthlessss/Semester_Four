@@ -2,6 +2,8 @@ namespace Lab4
 {
     public partial class DBForm : Form
     {
+        public static DatabaseManipulations database = new DatabaseManipulations();
+
         AddForm? addDebt;
         EditForm? editDebt;
         ListForm? debtList;
@@ -10,7 +12,7 @@ namespace Lab4
             InitializeComponent();
         }
 
-        bool isMenuOpen = true;
+        bool isMenuOpen = false;
 
         private void menuTransition_Tick(object sender, EventArgs e)
         {
@@ -43,11 +45,15 @@ namespace Lab4
             menuTransition.Start();
         }
 
-        private void OpenDebtListForm()
+        public void OpenDebtListForm()
         {
+           /*DateTime date = DateTime.Now;
+            DatabaseValues val = new DatabaseValues(1, "Ivan", "Efremov", 100, date.ToString("dd/MM/yyyy"), date.ToString("dd/MM/yyyy"), "Active");
+            database.InsertValue(val);*/
+
             if (debtList == null)
             {
-                debtList = new ListForm();
+                debtList = new ListForm(this);
                 debtList.FormClosed += DebtList_FormClosed;
                 debtList.MdiParent = this;
                 debtList.Show();
@@ -56,6 +62,8 @@ namespace Lab4
 
             debtList.Dock = DockStyle.Fill;
         }
+
+        
 
         private void listLabel_Click(object sender, EventArgs e)
         {
@@ -69,7 +77,7 @@ namespace Lab4
         {
             if (addDebt == null)
             {
-                addDebt = new AddForm();
+                addDebt = new AddForm(this);
                 addDebt.FormClosed += AddDebt_FormClosed;
                 addDebt.MdiParent = this;
                 addDebt.Show();

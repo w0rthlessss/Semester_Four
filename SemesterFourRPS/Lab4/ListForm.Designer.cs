@@ -168,6 +168,8 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "ListForm";
+            Activated += ListForm_Activated;
+            Load += ListForm_Load;
             ((System.ComponentModel.ISupportInitialize)debtTable).EndInit();
             ResumeLayout(false);
         }

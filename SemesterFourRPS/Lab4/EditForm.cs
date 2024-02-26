@@ -17,9 +17,6 @@ namespace Lab4
             InitializeComponent();
         }
 
-        private void formLabel_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

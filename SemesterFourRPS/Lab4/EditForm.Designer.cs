@@ -294,7 +294,6 @@
             formLabel.TabIndex = 4;
             formLabel.Text = "Edit Debt";
             formLabel.TextAlign = ContentAlignment.MiddleLeft;
-            formLabel.Click += formLabel_Click;
             // 
             // btnContainer
             // 

@@ -65,7 +65,7 @@
             sideBarMenu.Location = new Point(0, 0);
             sideBarMenu.Name = "sideBarMenu";
             sideBarMenu.Padding = new Padding(0, 0, 0, 10);
-            sideBarMenu.Size = new Size(286, 564);
+            sideBarMenu.Size = new Size(55, 564);
             sideBarMenu.TabIndex = 0;
             // 
             // showMenu

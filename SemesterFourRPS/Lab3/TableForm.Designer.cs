@@ -45,9 +45,10 @@
             coordinateTable.Dock = DockStyle.Fill;
             coordinateTable.Location = new Point(0, 0);
             coordinateTable.Name = "coordinateTable";
+            coordinateTable.RowHeadersVisible = false;
             coordinateTable.RowHeadersWidth = 51;
             coordinateTable.ScrollBars = ScrollBars.Vertical;
-            coordinateTable.Size = new Size(352, 523);
+            coordinateTable.Size = new Size(301, 523);
             coordinateTable.TabIndex = 0;
             coordinateTable.Tag = "double";
             // 
@@ -95,7 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(352, 523);
+            ClientSize = new Size(301, 523);
             Controls.Add(coordinateTable);
             Name = "TableForm";
             Text = "TableForm";
