@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             label1 = new Label();
             debtTable = new DataGridView();
             id = new DataGridViewTextBoxColumn();
@@ -40,7 +40,10 @@
             LoanDate = new DataGridViewTextBoxColumn();
             ExpirationDate = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            saveBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)debtTable).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -63,24 +66,24 @@
             debtTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             debtTable.BackgroundColor = SystemColors.ButtonFace;
             debtTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            debtTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            debtTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             debtTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             debtTable.Columns.AddRange(new DataGridViewColumn[] { id, firstName, SecondName, Sum, LoanDate, ExpirationDate, Status });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            debtTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            debtTable.DefaultCellStyle = dataGridViewCellStyle9;
             debtTable.Dock = DockStyle.Fill;
             debtTable.GridColor = Color.FromArgb(40, 40, 40);
             debtTable.Location = new Point(0, 50);
@@ -100,9 +103,9 @@
             // 
             // id
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = "0";
-            id.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.NullValue = "0";
+            id.DefaultCellStyle = dataGridViewCellStyle8;
             id.HeaderText = "id";
             id.MinimumWidth = 50;
             id.Name = "id";
@@ -150,12 +153,41 @@
             Status.Name = "Status";
             Status.ReadOnly = true;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(saveBtn);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 393);
+            panel1.Margin = new Padding(3, 3, 20, 20);
+            panel1.Name = "panel1";
+            panel1.Padding = new Padding(0, 0, 20, 20);
+            panel1.Size = new Size(850, 57);
+            panel1.TabIndex = 2;
+            // 
+            // saveBtn
+            // 
+            saveBtn.BackColor = Color.Gray;
+            saveBtn.Cursor = Cursors.Hand;
+            saveBtn.Dock = DockStyle.Right;
+            saveBtn.FlatStyle = FlatStyle.Flat;
+            saveBtn.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            saveBtn.ForeColor = Color.White;
+            saveBtn.Location = new Point(591, 0);
+            saveBtn.Margin = new Padding(10, 3, 10, 3);
+            saveBtn.Name = "saveBtn";
+            saveBtn.Size = new Size(239, 37);
+            saveBtn.TabIndex = 1;
+            saveBtn.Text = "Save to file";
+            saveBtn.UseVisualStyleBackColor = false;
+            saveBtn.Click += saveBtn_Click;
+            // 
             // ListForm
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(850, 450);
             ControlBox = false;
+            Controls.Add(panel1);
             Controls.Add(debtTable);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -172,6 +204,7 @@
             Activated += ListForm_Activated;
             Load += ListForm_Load;
             ((System.ComponentModel.ISupportInitialize)debtTable).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -186,5 +219,7 @@
         private DataGridViewTextBoxColumn LoanDate;
         private DataGridViewTextBoxColumn ExpirationDate;
         private DataGridViewTextBoxColumn Status;
+        private Panel panel1;
+        private Button saveBtn;
     }
 }

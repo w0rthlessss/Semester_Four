@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.Json;
 
 namespace Lab4
 {
@@ -68,6 +69,29 @@ namespace Lab4
         {
             int id = Convert.ToInt32(debtTable.Rows[e.RowIndex].Cells[0].Value);
             main.OpenEditForm(id);
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            if (values.Length == 0)
+            {
+                MessageBox.Show("Database contains no data!", "", MessageBoxButtons.OK);
+                return;
+            }
+            string[] output = new string[values.Length];
+            for(int i = 0; i < values.Length; i++)
+                output[i] = JsonSerializer.Serialize(values[i]);
+            
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "json (*json)|*.json|Все файлы (*.*)|*.* ";
+            saveFileDialog.Title = "Save data";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filepath = saveFileDialog.FileName;
+                File.WriteAllLines(filepath, output);
+            }
         }
     }
 }
