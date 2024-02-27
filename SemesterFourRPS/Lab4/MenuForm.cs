@@ -2,8 +2,9 @@ namespace Lab4
 {
     public partial class DBForm : Form
     {
-        public static DatabaseManipulations database = new DatabaseManipulations();
+        const string dbPath = "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\bin\\Debug\\net8.0-windows\\debtDatabase.db";
 
+        public static DatabaseManipulations database = new DatabaseManipulations(dbPath);
         AddForm? addDebt;
         EditForm? editDebt;
         ListForm? debtList;
@@ -12,7 +13,7 @@ namespace Lab4
             InitializeComponent();
         }
 
-        bool isMenuOpen = false;
+        bool isMenuOpen = true;
 
         private void menuTransition_Tick(object sender, EventArgs e)
         {
@@ -128,6 +129,11 @@ namespace Lab4
         private void DBForm_Load(object sender, EventArgs e)
         {
             OpenDebtListForm();
+        }
+
+        private void DBForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            database.CloseConnection();
         }
     }
 

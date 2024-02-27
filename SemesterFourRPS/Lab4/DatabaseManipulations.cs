@@ -102,17 +102,24 @@ namespace Lab4
     public class DatabaseManipulations
     {
         private SqliteCommand command;
-        public DatabaseManipulations()
+        SqliteConnection connection;
+        public DatabaseManipulations(string path)
         {
-            SqliteConnection connection = new SqliteConnection("Data source=debtDatabase.db;Mode=ReadWrite");
+            connection = new SqliteConnection($"Data source={path};Mode=ReadWrite"); ;
             connection.Open();
             command = new SqliteCommand("",connection);
         }
 
-        public DatabaseValues[] ReadTable()
+        public int GetRecordCount()
         {
             command.CommandText = "SELECT COUNT(*) FROM Debts";
-            int size = Convert.ToInt32(command.ExecuteScalar());
+            return Convert.ToInt32(command.ExecuteScalar());
+        }
+
+        public DatabaseValues[] ReadTable()
+        {
+            
+            int size = GetRecordCount();
             DatabaseValues[] values = new DatabaseValues[size];
 
             command.CommandText = "SELECT * FROM Debts";
@@ -135,6 +142,11 @@ namespace Lab4
             reader.Close();
             
             return values;
+        }
+
+        public void CloseConnection()
+        {
+            connection.Close();
         }
 
         public void UpdateValue(DatabaseValues value)

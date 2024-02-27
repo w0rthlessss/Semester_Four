@@ -65,7 +65,7 @@
             sideBarMenu.Location = new Point(0, 0);
             sideBarMenu.Name = "sideBarMenu";
             sideBarMenu.Padding = new Padding(0, 0, 0, 10);
-            sideBarMenu.Size = new Size(55, 564);
+            sideBarMenu.Size = new Size(280, 564);
             sideBarMenu.TabIndex = 0;
             // 
             // showMenu
@@ -220,6 +220,7 @@
             IsMdiContainer = true;
             Name = "DBForm";
             Text = "Lab4";
+            FormClosing += DBForm_FormClosing;
             Load += DBForm_Load;
             sideBarMenu.ResumeLayout(false);
             showMenu.ResumeLayout(false);

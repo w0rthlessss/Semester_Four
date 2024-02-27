@@ -26,12 +26,9 @@ namespace Lab4
             InitializeComponent();
             this.main = main;
             this.id = id;
-            //Пофиксить чтоб работало
-            idTextBox.Text = id.ToString();
-            idTextBox_TextChanged(null, null);
         }
 
-        private int id;
+        private int id=0;
         private int index;
 
         private void ClearFields()
@@ -127,6 +124,10 @@ namespace Lab4
         private void EditForm_Load(object sender, EventArgs e)
         {
             ClearFields();
+            if (id != 0)
+            {
+                idTextBox.Text = id.ToString();
+            } 
         }
 
         private bool CheckIfThereAnyChanges()

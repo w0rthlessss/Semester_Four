@@ -58,21 +58,10 @@ namespace Lab4
             UpdateTableValues();
         }
 
-        private bool CompareOldAndNew()
-        {
-            if (oldValues.Length != values.Length) return true;
-            for (int i = 0; i < oldValues.Length; i++)
-            {
-                if (!oldValues.Equals(values[i])) return false;
-            }
-            return true;
-
-        }
-
         private void ListForm_Activated(object sender, EventArgs e)
         {
-            if (CompareOldAndNew())
-                UpdateTableValues();
+            values = DBForm.database.ReadTable();
+            UpdateTableValues();
         }
 
         private void debtTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

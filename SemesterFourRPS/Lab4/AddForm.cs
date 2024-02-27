@@ -27,7 +27,8 @@ namespace Lab4
 
         private void ClearFields()
         {
-            idTextBox.Text = (ListForm.values.Last().Id + 1).ToString();
+            if (ListForm.values.Length == 0) idTextBox.Text = "1";
+            else idTextBox.Text = (ListForm.values.Last().Id + 1).ToString();
             firstNameTextBox.Clear();
             secondNameTextBox.Clear();
             amountTextBox.Clear();
