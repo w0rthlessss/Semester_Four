@@ -1,5 +1,5 @@
 #include <iostream>
-#include<windows.h>
+
 using namespace std;
 
 enum class MENU { check = 1, exit = 2 };
@@ -27,26 +27,26 @@ int GetUnsInt() {
 
 bool numIsPrime(unsigned int number) {
 	int isNumberDivisible = 0;
-	bool simple = true;
+	bool prime = true;
 	for (unsigned int i = 2; i <= sqrt(number); i++) {
 		const int denom = i;
 		_asm {
 			XOR EDX, EDX
 			MOV EAX, number
 			DIV denom
-			CMP EDX, 0
-			JNE L01
+			CMP EDX, 1
+			JGE L01
 			MOV isNumberDivisible, 1
 			L01:
 		}
 		if (isNumberDivisible) {
-			simple = false;
-			break;
+			prime = false;
+			return prime;
 		}
 	}
 	if (number <= 1)
-		simple = false;
-	return simple;
+		prime = false;
+	return prime;
 }
 
 //bool numIsPrime(unsigned int number) {
@@ -85,13 +85,6 @@ bool numIsPrime(unsigned int number) {
 //}
 
 
-
-void SetColor(int text, int background)
-{
-	HANDLE hConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsoleHandle, (WORD)((background << 4) | text));
-}
-
 int main() {
 	setlocale(LC_CTYPE, "Russian");
 	unsigned int number;
@@ -105,17 +98,14 @@ int main() {
 		MENU choice = static_cast<MENU>(checkInput<int>());
 		switch (choice) {
 		case MENU::check:
-			cout << "Введите число для выполнения проверки, является ли оно простым: ";
+			cout << "Введите число для выполнения проверки: ";
 			number = GetUnsInt();
 			if (numIsPrime(number)) {
-				SetColor(2, 0);
 				cout << endl << "Число " << number << " является простым." << endl << endl;
 			}
 			else {
-				SetColor(4, 0);
 				cout << endl << "Число " << number << " не является простым." << endl << endl;
 			}
-			SetColor(15, 0);
 			break;
 		case MENU::exit:
 			cout << "Работа программы была завершена пользователем." << endl;

@@ -54,12 +54,18 @@
             panel2 = new Panel();
             func = new Label();
             panel1 = new Panel();
+            menuStrip1 = new MenuStrip();
+            fileMenu = new ToolStripMenuItem();
+            optionOpen = new ToolStripMenuItem();
+            optionSave = new ToolStripMenuItem();
             graphPlane = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)graphPlane).BeginInit();
             SuspendLayout();
             // 
@@ -434,11 +440,50 @@
             // panel1
             // 
             panel1.BackColor = Color.DimGray;
+            panel1.Controls.Add(menuStrip1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(357, 62);
             panel1.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.DarkGray;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileMenu });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(357, 28);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileMenu
+            // 
+            fileMenu.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            fileMenu.DropDownItems.AddRange(new ToolStripItem[] { optionOpen, optionSave });
+            fileMenu.ForeColor = Color.Black;
+            fileMenu.Name = "fileMenu";
+            fileMenu.Size = new Size(46, 24);
+            fileMenu.Text = "File";
+            // 
+            // optionOpen
+            // 
+            optionOpen.BackColor = SystemColors.AppWorkspace;
+            optionOpen.ForeColor = Color.Black;
+            optionOpen.Name = "optionOpen";
+            optionOpen.Size = new Size(224, 26);
+            optionOpen.Text = "Open";
+            optionOpen.Click += optionOpen_Click;
+            // 
+            // optionSave
+            // 
+            optionSave.BackColor = SystemColors.AppWorkspace;
+            optionSave.ForeColor = Color.Black;
+            optionSave.Name = "optionSave";
+            optionSave.Size = new Size(224, 26);
+            optionSave.Text = "Save";
+            optionSave.Click += optionSave_Click;
             // 
             // graphPlane
             // 
@@ -457,6 +502,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 582);
             Controls.Add(splitContainer1);
+            MainMenuStrip = menuStrip1;
             Name = "GraphForm";
             Text = "Lab3";
             Shown += GraphForm_Shown;
@@ -466,6 +512,10 @@
             splitContainer1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)graphPlane).EndInit();
             ResumeLayout(false);
         }
@@ -499,5 +549,9 @@
         private Panel panel4;
         private Panel panel5;
         private Button showCoordinatesBtn;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileMenu;
+        private ToolStripMenuItem optionOpen;
+        private ToolStripMenuItem optionSave;
     }
 }

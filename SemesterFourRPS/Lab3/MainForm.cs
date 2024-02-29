@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Lab_3
 {
     public partial class GraphForm : Form
@@ -117,6 +119,8 @@ namespace Lab_3
         private bool CheckGraphOdds()
         {
             isGraphShown = false;
+
+            showCoordinatesBtn.Enabled = false;
 
             if (!isValidData) return false;
 
@@ -341,6 +345,116 @@ namespace Lab_3
         {
             Form table = new TableForm(x, y);
             table.ShowDialog();
+        }
+
+        private bool CheckInputValues(string input, int order)
+        {
+            int[] lengths = [2, 4, 1];
+            string[] separated = input.Split(';');
+
+            if (separated.Length != lengths[order]) return false;
+
+            for (int i = 0; i < separated.Length; i++)
+                if (!double.TryParse(separated[i], out double tmp)) return false;
+
+            return true;
+        }
+
+        private double[] ConvertInputValues(string[] input)
+        {
+            int[] lengths = [2, 4, 1];
+            double[] values = new double[7];
+            int counter = 0;
+            for (int i = 0; i < lengths.Length; i++)
+            {
+                string[] separated = input[i].Split(";");
+                for (int j = 0; j < lengths[i]; j++)
+                    values[counter++] = Convert.ToDouble(separated[j]);
+
+            }
+
+            return values;
+        }
+
+        private void optionOpen_Click(object sender, EventArgs e)
+        {
+            showCoordinatesBtn.Focus();
+
+            MessageBox.Show("LeftBorder;RightBorder\nA;B;C;D\nStep\n", "Input formating", MessageBoxButtons.OK);
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "txt (*txt)|*.txt|Все файлы (*.*)|*.* ";
+            openFileDialog.Title = "Open data";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFileDialog.CheckFileExists = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] input = File.ReadAllLines(openFileDialog.FileName);
+
+                if (input.Length != 3)
+                {
+                    MessageBox.Show("Invalid formating!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                for (int i = 0; i < 3; i++)
+                {
+                    if (!CheckInputValues(input[i], i))
+                    {
+                        MessageBox.Show("Invalid formating!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                double tmpStep = double.Parse(input[2]);
+                if (tmpStep > 1 || tmpStep <= 0)
+                {
+                    MessageBox.Show("Invalid formating!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                double[] values = ConvertInputValues(input);
+                leftBorderVal = Math.Round(values[0], 2);
+                rightBorderVal = Math.Round(values[1], 2);
+                a = Math.Round(values[2], 2);
+                b = Math.Round(values[3], 2);
+                c = Math.Round(values[4], 2);
+                d = Math.Round(values[5], 2);
+                step = Math.Round(values[6], 2);
+
+                leftBorderValue.Text = FormatTextField(leftBorderVal.ToString());
+                rightBorderValue.Text = FormatTextField(rightBorderVal.ToString());
+                aValue.Text = FormatTextField(a.ToString());
+                bValue.Text = FormatTextField(b.ToString());
+                cValue.Text = FormatTextField(c.ToString());
+                dValue.Text = FormatTextField(d.ToString());
+                stepValue.Text = FormatTextField(step.ToString());
+            }
+
+
+        }
+
+        private void optionSave_Click(object sender, EventArgs e)
+        {
+            showCoordinatesBtn.Focus();
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "txt (*txt)|*.txt|Все файлы (*.*)|*.* ";
+            saveFileDialog.Title = "Save data";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] output = [
+                    leftBorderVal.ToString() + ';' + rightBorderVal.ToString(),
+                    a.ToString() + ';' + b.ToString() + ';' + c.ToString() + ';' + d.ToString(),
+                step.ToString()];
+
+                File.WriteAllLines(saveFileDialog.FileName, output);
+
+                MessageBox.Show("Data was successfully saved!", "", MessageBoxButtons.OK);
+            }
         }
     }
 }
