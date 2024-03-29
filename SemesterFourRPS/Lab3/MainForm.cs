@@ -1,3 +1,5 @@
+using System;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace Lab_3
@@ -22,14 +24,19 @@ namespace Lab_3
         double[] x = new double[0];
         double[] y = new double[0];
 
+        public static Bitmap image = new Bitmap(1,1);
+        public static int height = 0;
+        public static int width = 0;
+        //public static string imgPath = "img\\tempGraph";
+
         protected void DrawAxises()
         {
             graphPlane.Refresh();
-            Graphics graphic = graphic = graphPlane.CreateGraphics();
+            Graphics graphic = graphPlane.CreateGraphics();
             Pen pen = new Pen(Color.FromArgb(34, 34, 34), 2f);
 
-            int height = graphPlane.Height;
-            int width = graphPlane.Width;
+            height = graphPlane.Height;
+            width = graphPlane.Width;
 
             int x = 0;
             int y = graphPlane.Size.Height / 2;
@@ -52,7 +59,7 @@ namespace Lab_3
                         c * (xPrev - graphPlane.Width / 2) / Convert.ToDouble(pixelsPerSection) + d)
                     );
 
-            Graphics graphic = graphic = graphPlane.CreateGraphics();
+            Graphics graphic = graphPlane.CreateGraphics();
             Pen pen = new Pen(Color.BlueViolet, 3f);
 
             Point[] points = CalculateGraphPoints();
@@ -343,7 +350,14 @@ namespace Lab_3
 
         private void showCoordinatesBtn_Click(object sender, EventArgs e)
         {
-            Form table = new TableForm(x, y);
+            image = new Bitmap(width, height);
+            using (Graphics graphics = Graphics.FromImage(image))
+            {
+                graphics.CopyFromScreen(graphPlane.PointToScreen(Point.Empty), Point.Empty, graphPlane.Size);
+            }
+
+            Form table = new TableForm(x, y, image);
+
             table.ShowDialog();
         }
 
@@ -415,13 +429,28 @@ namespace Lab_3
                 }
 
                 double[] values = ConvertInputValues(input);
-                leftBorderVal = Math.Round(values[0], 2);
-                rightBorderVal = Math.Round(values[1], 2);
-                a = Math.Round(values[2], 2);
-                b = Math.Round(values[3], 2);
-                c = Math.Round(values[4], 2);
-                d = Math.Round(values[5], 2);
-                step = Math.Round(values[6], 2);
+
+                double leftBorderValTmp = Math.Round(values[0], 2);
+                double rightBorderValTmp = Math.Round(values[1], 2);
+                double aTmp = Math.Round(values[2], 2);
+                double bTMp = Math.Round(values[3], 2);
+                double cTmp = Math.Round(values[4], 2);
+                double dTmp = Math.Round(values[5], 2);
+                double stepTmp = Math.Round(values[6], 2);
+
+                if(leftBorderValTmp >= rightBorderValTmp)
+                {
+                    MessageBox.Show("Right border must be greater than left!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                leftBorderVal = leftBorderValTmp;
+                rightBorderVal = rightBorderValTmp;
+                a = aTmp;
+                b = bTMp;
+                c = cTmp;
+                d = dTmp;
+                step = stepTmp;
 
                 leftBorderValue.Text = FormatTextField(leftBorderVal.ToString());
                 rightBorderValue.Text = FormatTextField(rightBorderVal.ToString());

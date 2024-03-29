@@ -1,0 +1,6 @@
+﻿  Assembling modify.asm...
+modify.asm(1): error A2008: syntax error : .
+modify.asm(2): error A2008: syntax error : .
+modify.asm(6): error A2008: syntax error : X
+modify.asm(22): fatal error A1010: unmatched block nesting : MODIFY_ARRAY
+D:\visual studio\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\modify.obj" /W3 /errorReport:prompt  /Tamodify.asm" с кодом "1".

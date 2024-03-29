@@ -472,7 +472,7 @@
             optionOpen.BackColor = SystemColors.AppWorkspace;
             optionOpen.ForeColor = Color.Black;
             optionOpen.Name = "optionOpen";
-            optionOpen.Size = new Size(224, 26);
+            optionOpen.Size = new Size(128, 26);
             optionOpen.Text = "Open";
             optionOpen.Click += optionOpen_Click;
             // 
@@ -481,7 +481,7 @@
             optionSave.BackColor = SystemColors.AppWorkspace;
             optionSave.ForeColor = Color.Black;
             optionSave.Name = "optionSave";
-            optionSave.Size = new Size(224, 26);
+            optionSave.Size = new Size(128, 26);
             optionSave.Text = "Save";
             optionSave.Click += optionSave_Click;
             // 

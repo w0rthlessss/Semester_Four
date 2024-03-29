@@ -52,6 +52,7 @@ bool numIsPrime(unsigned int number) {
 //bool numIsPrime(unsigned int number) {
 //	int isNumberDivisible = 0;
 //	bool prime = true;
+//	int denom = sqrt(number);
 //		_asm {
 //			CMP number, 1
 //			JG L01
