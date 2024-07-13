@@ -65,7 +65,7 @@ namespace Practice3DPrinterFilterApp
             for (int i = 0; i < 2; i++)
             {
                 RadioButton tmp = new RadioButton();
-                tmp.Content = i % 2 == 0 ? $"<{avgDepth}" : $">{avgDepth}";
+                tmp.Content = i % 2 == 0 ? $"<{avgDepth}" : $">={avgDepth}";
                 depths.Add(tmp);                
             }
 

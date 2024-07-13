@@ -43,6 +43,8 @@ namespace Practice3DPrinterFilterApp
             SetButtonConnections();
 
             printers = db.Printers;
+            filteredPrinters = new List<PrinterClass>(printers);
+
             UICreation.CreateFilterResults(printers, ref filterResults);
             ShowResults();
         }
@@ -59,21 +61,63 @@ namespace Practice3DPrinterFilterApp
             int depthAvgValue = Convert.ToInt32(depths[1].Content.ToString()!.Substring(1));
 
             filteredPrinters.Clear();
+            filteredPrinters = new List<PrinterClass>(printers);
 
-            /*Эта хуйня не работает так же как и моя голова*/
-
-            filteredPrinters = printers.Where(p=>
-                (!reqManufacturers.Any() || reqManufacturers.All(m => p.Manufacturer == m)) &&
-                (!reqTechs.Any() || reqTechs.All(t => p.LayerTechnology == t)) &&
-                (!reqTypes.Any() || reqTypes.All(t => p.CaseType == t)) &&
-                (!reqMats.Any() || reqMats.All(m => p.Material.Contains(m))) &&
-                (!reqPurposes.Any() || reqPurposes.All(pur => p.Purpose == pur)) &&
-                (!reqHeights.Any() || reqHeights.All(h => p.Height == Convert.ToInt32(h))) &&
-                (reqDepthIndex == -1 || reqDepthIndex == 1 ? p.Depth < depthAvgValue : p.Depth >= depthAvgValue)).ToList();
+            filteredPrinters = reqManufacturers.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqManufacturers.All(m => p.Manufacturer == m)).ToList();
+            filteredPrinters = reqTechs.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTechs.All(t => p.LayerTechnology == t)).ToList();
+            filteredPrinters = reqTypes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTypes.All(t => p.CaseType == t)).ToList();
+            filteredPrinters = reqMats.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqMats.All(m => p.Material.Contains(m))).ToList();
+            filteredPrinters = reqPurposes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqPurposes.All(pur => p.Purpose == pur)).ToList();
+            filteredPrinters = reqHeights.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqHeights.All(h => p.Height == Convert.ToInt32(h))).ToList();
+            filteredPrinters = reqDepthIndex == -1 || reqDepthIndex == 0 ? filteredPrinters : filteredPrinters.Where(p => reqDepthIndex == 1 ? p.Depth < depthAvgValue : p.Depth >= depthAvgValue).ToList();            
 
             UICreation.CreateFilterResults(filteredPrinters, ref filterResults);
             ShowResults();
 
+        }
+
+        private void SearchPrinters(object sender, MouseButtonEventArgs e)
+        {
+            string request = searchBar.Text;
+            List<PrinterClass> searchResults = new List<PrinterClass>();
+            foreach(PrinterClass printer in filteredPrinters)
+            {
+                if(isAnyFieldContainsValue(printer, request)) searchResults.Add(printer);
+            }
+
+            UICreation.CreateFilterResults(searchResults, ref filterResults);
+            ShowResults();
+        }
+
+        private bool isAnyFieldContainsValue(PrinterClass printer, string value)
+        {
+            var properties = printer.GetType().GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+            foreach ( var property in properties)
+            {
+                int tmp = 0;
+                var propVal = property.GetValue(printer);
+                if (propVal == null) continue;
+
+                if (propVal.GetType() == typeof(int) && !int.TryParse(value, out tmp))
+                    continue;
+                else if(propVal.GetType() == typeof(int) && !int.TryParse(value, out tmp))
+                    if(propVal.Equals(tmp)) return true;
+
+                if(propVal is List<string> collection)
+                {
+                    if (collection.Any(p => p != null))
+                        foreach (string item in collection)
+                        {
+                            if (item.ToLower().Contains(value.ToLower())) return true;
+                        }
+                    else continue;                    
+
+                }
+
+                else if(propVal.ToString()!.ToLower().Contains(value.ToLower())) return true;
+                
+            }
+            return false;
         }
 
 
@@ -86,6 +130,28 @@ namespace Practice3DPrinterFilterApp
                     values.Add(checkBox.Content.ToString()!);
             }
             return values;
+        }
+
+        private void DeselectFilters(ref List<CheckBox> filters)
+        {
+            foreach (CheckBox checkBox in filters)            
+                checkBox.IsChecked = false;            
+        }
+
+        private void ResetFilters(object sender, MouseButtonEventArgs e)
+        {
+            DeselectFilters(ref manufacturers);
+            DeselectFilters(ref layerTechnologies);
+            DeselectFilters(ref caseTypes);
+            DeselectFilters(ref materials);
+            DeselectFilters(ref purposes);
+            DeselectFilters(ref heights);
+            depths.All(d => d.IsChecked == false);
+
+            filteredPrinters = new List<PrinterClass>(printers);
+
+            UICreation.CreateFilterResults(filteredPrinters, ref filterResults);
+            ShowResults();
         }
 
         #region UiRegion
@@ -110,9 +176,9 @@ namespace Practice3DPrinterFilterApp
             materialsBtn.MouseLeftButtonDown += ToggleMat;
             purposesBtn.MouseLeftButtonDown += TogglePurpose;
             apply.MouseLeftButtonDown += ApplyFilters;
-        }
-
-        
+            reset.MouseLeftButtonDown += ResetFilters;
+            SearchButton.MouseLeftButtonDown += SearchPrinters;
+        }        
 
         private void SetFilterOptions()
         {

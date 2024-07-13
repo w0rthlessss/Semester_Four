@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practice3DPrinterFilterApp" d:DataContext=""
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="3D Printer Search" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid Background="#FFF1F1F1">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -108,7 +108,7 @@
                         <Border x:Name="SearchButton" DockPanel.Dock="Right"  Cursor="Hand" Background="#FF02BE30" Margin="40,0,0,0" CornerRadius="10" >
                             <Label Content="Найти" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28" Foreground="White" FontWeight="Bold" Margin="10" />
                         </Border>
-                        <TextBox Background="#FFE9E9E9" BorderBrush="#FF3A3A3A" BorderThickness="2"  FontSize="20" VerticalAlignment="Center"/>
+                        <TextBox x:Name="searchBar" Background="#FFE9E9E9" BorderBrush="#FF3A3A3A" BorderThickness="2"  FontSize="20" VerticalAlignment="Center"/>
                         
                     </DockPanel>
                 </Border>

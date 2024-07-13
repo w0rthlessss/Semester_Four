@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Practice3DPrinterFilterApp
 {
@@ -27,25 +26,9 @@ namespace Practice3DPrinterFilterApp
         {
             connection = new SqliteConnection($"Data source={dbPath}");
             connection.Open();            
-            GetListOfRecords();
-            //LoadImage();
+            GetListOfRecords();            
             var a = Printers;
         }
-
-       /* private void LoadImage()
-        {
-            for(int i = 1; i <= 11; i++)
-            {
-                string imagePath = $"../../../imgs/{i}.png";
-                string comText = "UPDATE PRINTERS SET image = @img WHERE id = @ident";
-                using(SqliteCommand com = new SqliteCommand(comText, connection))
-                {
-                    com.Parameters.AddWithValue("@img", File.ReadAllBytes(imagePath));
-                    com.Parameters.AddWithValue("@ident", i);
-                    com.ExecuteNonQuery();
-                }
-            }
-        }*/
 
         private void GetListOfRecords()
         {
