@@ -30,7 +30,6 @@ C:\SemesterFourth\Practice3DPrinterFilterApp\bin\Debug\net8.0-windows\runtimes\w
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\Practice3DPrinterFilterApp.csproj.AssemblyReference.cache
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\App.g.cs
-C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\Practice3DPrinterFilterApp_Content.g.cs
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\Practice3DPrinterFilterApp_MarkupCompile.cache
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\Practice3DPrinterFilterApp_MarkupCompile.lref
 C:\SemesterFourth\Practice3DPrinterFilterApp\obj\Debug\net8.0-windows\MainWindow.baml

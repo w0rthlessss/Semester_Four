@@ -63,12 +63,12 @@ namespace Practice3DPrinterFilterApp
             filteredPrinters.Clear();
             filteredPrinters = new List<PrinterClass>(printers);
 
-            filteredPrinters = reqManufacturers.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqManufacturers.All(m => p.Manufacturer == m)).ToList();
-            filteredPrinters = reqTechs.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTechs.All(t => p.LayerTechnology == t)).ToList();
-            filteredPrinters = reqTypes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTypes.All(t => p.CaseType == t)).ToList();
-            filteredPrinters = reqMats.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqMats.All(m => p.Material.Contains(m))).ToList();
-            filteredPrinters = reqPurposes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqPurposes.All(pur => p.Purpose == pur)).ToList();
-            filteredPrinters = reqHeights.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqHeights.All(h => p.Height == Convert.ToInt32(h))).ToList();
+            filteredPrinters = reqManufacturers.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqManufacturers.Any(m => p.Manufacturer == m)).ToList();
+            filteredPrinters = reqTechs.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTechs.Any(t => p.LayerTechnology == t)).ToList();
+            filteredPrinters = reqTypes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqTypes.Any(t => p.CaseType == t)).ToList();
+            filteredPrinters = reqMats.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqMats.Any(m => p.Material.Contains(m))).ToList();
+            filteredPrinters = reqPurposes.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqPurposes.Any(pur => p.Purpose == pur)).ToList();
+            filteredPrinters = reqHeights.Count == 0 ? filteredPrinters : filteredPrinters.Where(p => reqHeights.Any(h => p.Height == Convert.ToInt32(h))).ToList();
             filteredPrinters = reqDepthIndex == -1 || reqDepthIndex == 0 ? filteredPrinters : filteredPrinters.Where(p => reqDepthIndex == 1 ? p.Depth < depthAvgValue : p.Depth >= depthAvgValue).ToList();            
 
             UICreation.CreateFilterResults(filteredPrinters, ref filterResults);

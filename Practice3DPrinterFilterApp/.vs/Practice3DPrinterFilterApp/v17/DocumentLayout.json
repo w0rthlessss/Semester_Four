@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\uicreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:uicreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\databaseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:databaseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\printerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:printerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|c:\\semesterfourth\\practice3dprinterfilterapp\\practice3dprinterfilterapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8E4D19ED-87E8-4EE5-87B3-BAB951F6B2F3}|Practice3DPrinterFilterApp.csproj|solutionrelative:practice3dprinterfilterapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 225,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,63 +38,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UICreation.cs",
-              "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\UICreation.cs",
-              "RelativeDocumentMoniker": "UICreation.cs",
-              "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\UICreation.cs",
-              "RelativeToolTip": "UICreation.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAEMAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:23:53.755Z"
+              "DocumentIndex": 4,
+              "Title": "Practice3DPrinterFilterApp.csproj",
+              "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\Practice3DPrinterFilterApp.csproj",
+              "RelativeDocumentMoniker": "Practice3DPrinterFilterApp.csproj",
+              "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\Practice3DPrinterFilterApp.csproj",
+              "RelativeToolTip": "Practice3DPrinterFilterApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-13T20:57:51.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "DatabaseOperations.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\DatabaseOperations.cs",
+              "RelativeDocumentMoniker": "DatabaseOperations.cs",
+              "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\DatabaseOperations.cs",
+              "RelativeToolTip": "DatabaseOperations.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T00:05:16.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-07T20:27:50.394Z"
+              "WhenOpened": "2024-07-07T20:27:50.394Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAUwHAAAAAiAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEYAAAB0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T20:27:49.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DatabaseOperations.cs",
-              "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\DatabaseOperations.cs",
-              "RelativeDocumentMoniker": "DatabaseOperations.cs",
-              "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\DatabaseOperations.cs",
-              "RelativeToolTip": "DatabaseOperations.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T00:05:16.817Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PrinterClass.cs",
               "DocumentMoniker": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\PrinterClass.cs",
               "RelativeDocumentMoniker": "PrinterClass.cs",
               "ToolTip": "C:\\SemesterFourth\\Practice3DPrinterFilterApp\\PrinterClass.cs",
               "RelativeToolTip": "PrinterClass.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAABBwCcAAAAIAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T02:40:53.241Z"
+              "WhenOpened": "2024-07-13T02:40:53.241Z",
+              "EditorCaption": ""
             }
           ]
         }

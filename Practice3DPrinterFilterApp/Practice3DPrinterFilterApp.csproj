@@ -11,10 +11,16 @@
   <ItemGroup>
     <None Remove="database.db" />
     <None Remove="dbModel.txp" />
+    <None Remove="icon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="database.db" />
+    <Resource Include="database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Practice3DPrinterFilterApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8eb94f4685ac8ab494d1273585a71b99e7ce7c0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8c255b2d3cbe50b0c01e7f9448edc59f41306c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Practice3DPrinterFilterApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Practice3DPrinterFilterApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
