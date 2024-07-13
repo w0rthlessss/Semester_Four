@@ -1,0 +1,183 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|c:\\semesterfourth\\semesterfourrps\\lab4\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\listform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:listform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\editform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:editform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|c:\\semesterfourth\\semesterfourrps\\lab4\\editform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:editform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|c:\\semesterfourth\\semesterfourrps\\lab4\\databasemanipulations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:databasemanipulations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|c:\\semesterfourth\\semesterfourrps\\lab4\\listform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:listform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E820AC55-144F-4F57-BE08-FD16C3DF39FA}|..\\Lab4_Tests\\Lab4_Tests.csproj|c:\\semesterfourth\\semesterfourrps\\lab4_tests\\lab4tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|c:\\semesterfourth\\semesterfourrps\\lab4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB4DB3A-B52B-4D66-979A-1AC0E9613B73}|Lab4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuForm.cs [Design]",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\MenuForm.cs",
+              "RelativeDocumentMoniker": "MenuForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\MenuForm.cs [Design]",
+              "RelativeToolTip": "MenuForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:13:57.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ListForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\ListForm.cs",
+              "RelativeDocumentMoniker": "ListForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\ListForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "ListForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:14:17.484Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddForm.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\AddForm.cs",
+              "RelativeDocumentMoniker": "AddForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\AddForm.cs",
+              "RelativeToolTip": "AddForm.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAADwv2sAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T18:17:52.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\AddForm.cs",
+              "RelativeDocumentMoniker": "AddForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T07:14:16.92Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\EditForm.cs",
+              "RelativeDocumentMoniker": "EditForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\EditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "EditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T13:54:44.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditForm.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\EditForm.cs",
+              "RelativeDocumentMoniker": "EditForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\EditForm.cs",
+              "RelativeToolTip": "EditForm.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAUwM4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:14:41.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatabaseManipulations.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\DatabaseManipulations.cs",
+              "RelativeDocumentMoniker": "DatabaseManipulations.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\DatabaseManipulations.cs",
+              "RelativeToolTip": "DatabaseManipulations.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAAAMgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:13:32.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ListForm.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\ListForm.cs",
+              "RelativeDocumentMoniker": "ListForm.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\ListForm.cs",
+              "RelativeToolTip": "ListForm.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAUwGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T21:52:35.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Lab4Tests.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4_Tests\\Lab4Tests.cs",
+              "RelativeDocumentMoniker": "..\\Lab4_Tests\\Lab4Tests.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4_Tests\\Lab4Tests.cs",
+              "RelativeToolTip": "..\\Lab4_Tests\\Lab4Tests.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwD8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:15:19.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab4\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:13:24.46Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

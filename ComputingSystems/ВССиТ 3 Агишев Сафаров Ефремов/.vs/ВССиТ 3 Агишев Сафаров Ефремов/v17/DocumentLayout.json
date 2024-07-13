@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\modify.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|solutionrelative:modify.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\random.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|solutionrelative:random.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CCF1113E-70E4-4F03-8BEB-70E01AD02748}|\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 242,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "random.asm",
+              "DocumentMoniker": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\random.asm",
+              "RelativeDocumentMoniker": "random.asm",
+              "ToolTip": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\random.asm",
+              "RelativeToolTip": "random.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-31T20:28:28.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "modify.asm",
+              "DocumentMoniker": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\modify.asm",
+              "RelativeDocumentMoniker": "modify.asm",
+              "ToolTip": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\modify.asm",
+              "RelativeToolTip": "modify.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-31T20:28:29.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\SemesterFourth\\ComputingSystems\\\u0412\u0421\u0421\u0438\u0422 3 \u0410\u0433\u0438\u0448\u0435\u0432 \u0421\u0430\u0444\u0430\u0440\u043E\u0432 \u0415\u0444\u0440\u0435\u043C\u043E\u0432\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-31T20:28:29.276Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

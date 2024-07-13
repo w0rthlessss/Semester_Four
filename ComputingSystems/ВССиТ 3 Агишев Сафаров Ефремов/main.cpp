@@ -12,19 +12,6 @@ extern "C" int* function(int, int*);
 #include <cstdlib>
 #include <ctime>
 
-// Function prototype
-//void function(int arraySize, int* initialArray);
-//
-//void function(int arraySize, int* initialArray) {
-//	srand(time(0));
-//	for (int i = 0; i < arraySize; ++i) {
-//		int randomNumber = (std::rand()%101)-50; 
-//		initialArray[i] = randomNumber;
-//	}
-//}
-
-
-
 int main() {
 	setlocale(LC_CTYPE, "Russian");
 
@@ -58,6 +45,6 @@ int main() {
 
 	cout << "Количество преобразованных элементов: " << numberOfReplaces << endl;
 
-	initialArray = nullptr;
+	delete initialArray;
 	return 0;
 }

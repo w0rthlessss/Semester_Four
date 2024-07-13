@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|c:\\semesterfourth\\semesterfourrps\\lab1\\segmentintersection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|solutionrelative:segmentintersection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|c:\\semesterfourth\\semesterfourrps\\lab1\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|solutionrelative:segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|c:\\semesterfourth\\semesterfourrps\\lab1\\datainputandoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|solutionrelative:datainputandoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|c:\\semesterfourth\\semesterfourrps\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|c:\\semesterfourth\\semesterfourrps\\lab1\\information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C500E969-10F0-49FE-A5C2-151B22EFD7D8}|Lab1.csproj|solutionrelative:information.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A44F61-6980-4740-B39C-6051A1315664}|..\\Lab1_Tests\\Lab1_Tests.csproj|c:\\semesterfourth\\semesterfourrps\\lab1_tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A44F61-6980-4740-B39C-6051A1315664}|..\\Lab1_Tests\\Lab1_Tests.csproj|c:\\semesterfourth\\semesterfourrps\\lab1_tests\\lab1tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:59:29.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Information.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Information.cs",
+              "RelativeDocumentMoniker": "Information.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Information.cs",
+              "RelativeToolTip": "Information.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:59:29.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataInputAndOutput.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\DataInputAndOutput.cs",
+              "RelativeDocumentMoniker": "DataInputAndOutput.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\DataInputAndOutput.cs",
+              "RelativeToolTip": "DataInputAndOutput.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:59:29.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Segment.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Segment.cs",
+              "RelativeDocumentMoniker": "Segment.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\Segment.cs",
+              "RelativeToolTip": "Segment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:59:29.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SegmentIntersection.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\SegmentIntersection.cs",
+              "RelativeDocumentMoniker": "SegmentIntersection.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1\\SegmentIntersection.cs",
+              "RelativeToolTip": "SegmentIntersection.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:59:29.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "..\\Lab1_Tests\\GlobalUsings.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\GlobalUsings.cs",
+              "RelativeToolTip": "..\\Lab1_Tests\\GlobalUsings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T08:48:34.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Lab1Tests.cs",
+              "DocumentMoniker": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1Tests.cs",
+              "RelativeDocumentMoniker": "..\\Lab1_Tests\\Lab1Tests.cs",
+              "ToolTip": "C:\\SemesterFourth\\SemesterFourRPS\\Lab1_Tests\\Lab1Tests.cs",
+              "RelativeToolTip": "..\\Lab1_Tests\\Lab1Tests.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T19:02:59.466Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
